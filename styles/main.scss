@@ -1,5 +1,11 @@
 @import "./cold-lib.scss";
 
+$blue: #4d8dca;
+$green: #9fcd59;
+$black: #342e37;
+$white: #fafdfc;
+$orange: #f5814c;
+
 body {
-  background-color: red;
+  background-color: $white;
 }
