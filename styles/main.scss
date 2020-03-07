@@ -47,7 +47,8 @@ body {
   align-items: center;
   flex-direction: row;
   box-shadow: 0 0 5px rgba($black, 0.5);
-  .logo {
+  .logo a {
+    text-decoration: none;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -80,4 +81,8 @@ body {
       }
     }
   }
+}
+
+.page {
+  padding: 10px 25px;
 }

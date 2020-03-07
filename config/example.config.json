@@ -1,0 +1,6 @@
+{
+  "mongoSession": "localhost:3000",
+  "mongoName": "regalrecipes",
+  "mongoUser": "jim",
+  "mongoPass": "password"
+}
