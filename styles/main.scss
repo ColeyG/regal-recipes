@@ -2,10 +2,82 @@
 
 $blue: #4d8dca;
 $green: #9fcd59;
+$orange: #f5814c;
 $black: #342e37;
 $white: #fafdfc;
-$orange: #f5814c;
+
+@mixin roboto($color: $black, $size: 12pt, $weight: normal) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+  font-family: "Roboto", sans-serif;
+}
+
+@mixin times($color: $black, $size: 12pt, $weight: normal) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+  font-family: "Times New Roman", Times, serif;
+}
+
+h1,
+h2 {
+  @include times($size: 36pt);
+}
 
 body {
-  background-color: $white;
+  background: linear-gradient(
+    90deg,
+    darken($white, 10%) 0%,
+    $white 10%,
+    $white 50%,
+    $white 90%,
+    darken($white, 5%) 100%
+  );
+  background-size: 100%;
+}
+
+.primary-header {
+  padding: 15px 20px;
+  margin: 0 15px;
+  background-color: $blue;
+  border-radius: 0 0 15px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  box-shadow: 0 0 5px rgba($black, 0.5);
+  .logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    h1 {
+      @include times($color: $white, $size: 36pt);
+    }
+    img {
+      width: 50px;
+      margin: 0 15px;
+    }
+  }
+  .primary-nav ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    li a {
+      @include roboto($size: 16pt, $color: $white);
+      display: block;
+      margin: 5px;
+      padding: 5px;
+      text-decoration: none;
+    }
+    .account a {
+      border: 1px solid rgba($white, 0.5);
+      transition: 0.2s;
+      &:hover {
+        background-color: rgba($white, 0.2);
+      }
+    }
+  }
 }
