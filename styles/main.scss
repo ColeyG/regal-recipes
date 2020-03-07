@@ -25,6 +25,10 @@ h2 {
   @include times($size: 36pt);
 }
 
+p {
+  @include roboto($size: 16pt, $color: $white);
+}
+
 body {
   background: linear-gradient(
     90deg,
@@ -67,11 +71,14 @@ body {
     align-items: center;
     flex-direction: row;
     li a {
+      text-decoration: underline dotted;
+    }
+    li a,
+    li p {
       @include roboto($size: 16pt, $color: $white);
       display: block;
       margin: 5px;
       padding: 5px;
-      text-decoration: none;
     }
     .account a {
       border: 1px solid rgba($white, 0.5);

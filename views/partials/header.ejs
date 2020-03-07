@@ -14,14 +14,23 @@
         <a href="#">Blog</a>
       </li>
       <li>
-        <a href="#">Popular</a>
+        <a href="/recipes/create">Log Your Recipe</a>
       </li>
+      <% if (locals.user) { %>
+      <li>
+        <p>Signed in as <%= user.username %></p>
+      </li>
+      <li class="account">
+        <a href="/logout">Log Out</a>
+      </li>
+      <% } else { %>
       <li class="account">
         <a href="login">Log In</a>
       </li>
       <li class="account">
         <a href="register">Sign Up</a>
       </li>
+      <% } %>
     </ul>
   </nav>
 </header>

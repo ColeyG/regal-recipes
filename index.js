@@ -12,6 +12,7 @@ const LocalStrategy = require('passport-local').Strategy;
 const indexRouter = require('./routes/index');
 const apiRouter = require('./routes/api');
 const userRouter = require('./routes/userfront');
+const recipeRouter = require('./routes/recipes');
 
 const config = require('./config/config.json');
 
@@ -56,6 +57,7 @@ passport.deserializeUser(User.deserializeUser());
 app.use('/', indexRouter);
 app.use('/api', apiRouter);
 app.use('/', userRouter);
+app.use('/recipes', recipeRouter);
 
 app.use((req, res, next) => {
   next(createError(404));

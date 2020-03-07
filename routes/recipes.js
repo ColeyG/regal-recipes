@@ -1,14 +1,11 @@
 /* eslint-disable array-callback-return */
 const express = require('express');
+const auth = require('../controllers/Authentication');
 
 const router = express.Router();
 
-router.get('/', (req, res, next) => {
-  if (req.user) {
-    res.render('index', { user: req.user });
-  } else {
-    res.render('index');
-  }
+router.get('/create', (req, res, next) => {
+  res.render('pages/create');
 });
 
 module.exports = router;
