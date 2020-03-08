@@ -140,4 +140,8 @@ body {
     @include roboto($size: 16pt, $color: $black);
     background-color: $green;
   }
+  p {
+    @include roboto($size: 12pt, $color: $black);
+    font-style: italic;
+  }
 }
