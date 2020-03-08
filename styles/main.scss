@@ -120,3 +120,24 @@ body {
     }
   }
 }
+
+.primary-form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  input {
+    @include input-normalize();
+    background-color: $orange;
+    margin: 10px 0;
+    padding: 10px;
+    @include roboto($size: 16pt, $color: $black);
+  }
+  button {
+    @include button-normalize();
+    padding: 10px;
+    margin: 10px 0;
+    @include roboto($size: 16pt, $color: $black);
+    background-color: $green;
+  }
+}

@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 /* eslint-disable array-callback-return */
 const express = require('express');
 const Recipe = require('../models/Recipe');
