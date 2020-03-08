@@ -5,7 +5,7 @@ const auth = require('../controllers/Authentication');
 const router = express.Router();
 
 router.get('/create', (req, res, next) => {
-  res.render('pages/create');
+  res.render('pages/create', { user: req.user });
 });
 
 module.exports = router;
